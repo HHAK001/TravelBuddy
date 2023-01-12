@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/site.webmanifest">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/default.css">
+    <link rel="stylesheet" href="/css/form.css">
+    <link rel="stylesheet" href="/css/bttn.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap10.css">
+    <!-- Script -->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css' rel='stylesheet' />
+    <link href="/css/mapbox.css" rel="stylesheet" />
+    <!-- Title -->
+    <title>TravelBuddy | Homepage</title>
+</head>
+
+<body>
+
+    <!-- NavBar -->
+    <div class="container">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+          <a href="/home" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-light text-decoration-none" style="font-family:'Caveat', cursive; font-weight: 700; font-size: 400%;">
+            TravelBuddy
+          </a>
+                <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 focus-in-contract-bck">   
+                    <li><a href="/suggestion" class="nav-link px-2 link-light">Suggest a new City</a></li>
+                    <li><a href="/contact" class="nav-link px-2 link-light">Contact</a></li>
+                </ul>
+        </header>
+    </div>
+
+    <div class="wrapper">
+
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Where do you wanna go?" aria-label="Where do you wanna go?" aria-describedby="City Searchbar">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+          </div>
+
+            <form action="/search-bar" method="POST">
+                <div>
+                    <input type="text" name="city" placeholder="Where do you wanna go?" required>
+                    <button class="bttn-simple bttn-md bttn-royal" type="submit">Search</button>
+                </div>
+            </form>
+    </div>
+    
+    <div class="mapBG">
+        <div id='map'>
+          <script src="/js/mapbox.js"></script>
+        </div>
+    </div>
+    
+</body>
+</html>

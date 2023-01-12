@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/site.webmanifest">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/default.css">
+    <link rel="stylesheet" href="/css/form.css">
+    <link rel="stylesheet" href="/css/bttn.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap10.css">
+    <!-- Script -->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css' rel='stylesheet' />
+    <link href="/css/mapbox.css" rel="stylesheet" />
+    <!-- Title -->
+    <title>TravelBuddy | Homepage</title>
+</head>
+<body>
+
+    <!-- NavBar -->
+    <div class="container">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom focus-in-expand-fwd">
+          <a href="/home" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-light text-decoration-none" style="font-family:'Caveat', cursive; font-weight: 700; font-size: 400%;">
+            TravelBuddy
+          </a>
+                <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 focus-in-contract-bck">   
+                    <li><a href="/suggestion" class="nav-link px-2 link-light">Suggest a new City</a></li>
+                    <li><a href="/contact" class="nav-link px-2 link-light">Contact</a></li>
+                </ul>
+        </header>
+    </div>
+    
+    <div class="container-ease-in">
+
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <img src="/images/gif/Studying.gif" class="shadow d-block mx-lg-auto img-fluid img-rounded" alt="homepage" width="700" height="500">
+                </div>
+
+                <div class="col-lg-6">
+                    <h1 class="display-5 fw-bold lh-1 mb-3">UniLife</h1>
+                    <p class="lead">
+                        UniLife is a platform designed by students for students to organize
+                        their everyday university life.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div class="container px-4 py-5" id="featured-3">
+            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+
+                <div class="feature col">
+                    <h2 class="pb-2 border-bottom">Why UniLife?</h2>
+                    <p>
+                        We wanted to digitize the normal calendar and lecture schedule,
+                        so that the average student world no longer have to carry around and annoying
+                        planner and save some space in the backpack. 
+                    </p>
+                </div>
+
+                <div class="feature col">
+                    <h2 class="pb-2 border-bottom">Functions</h2>
+                    <p>
+                        You have your own calendar in which you can enter all your important
+                        appointments, submissions and exams. In addition you can also create
+                        your own lecture schedule.
+                    </p>
+                </div>
+
+                <div class="feature col">
+                    <h2 class="pb-2 border-bottom">Rough day?</h2>
+                    <p>
+                        If you had a rough day at university and want to distract yourself
+                        for a while, you can play a little game on UniLife. And in no time
+                        you will have forgotten all the stress.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+        <div id='map'>
+          <script src="/scripts/mapbox.js"></script>
+        </div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/site.webmanifest">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/default.css">
+    <link rel="stylesheet" href="/css/form.css">
+    <link rel="stylesheet" href="/css/bttn.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap10.css">
+    <!-- Script -->
+    <script src="/js/showPassword.js"></script>
+    <!-- Title -->
+    <title>TravelBuddy | Contact</title>
+</head>
+<body>
+
+    <!-- NavBar -->
+    <div class="container">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom focus-in-expand-fwd">
+          <a href="/home" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-light text-decoration-none" style="font-family:'Caveat', cursive; font-weight: 700; font-size: 400%;">
+            TravelBuddy
+          </a>
+                <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 focus-in-contract-bck">   
+                    <li><a href="/suggestion" class="nav-link px-2 link-light">Suggest a new City</a></li>
+                    <li><a href="/contact" class="nav-link px-2 link-light">Contact</a></li>
+                </ul>
+        </header>
+    </div> 
+    
+    <div class="wrapper">
+        <div class="container-ease-in">
+            <h1 style="text-align: center;" class="pb-2 border-bottom">Contact us!</h1>
+        </div>
+    </div>
+
+    <div class="container-ease-in">
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <img src="/images/pictures/contact.jpg" alt="contact" class="d-block mx-lg-auto img-fluid" width="700" height="500">
+                </div>
+
+                <div class="col-lg-6">
+                    <form action="/feedback" method="POST">
+                        <div>
+                            <p>
+                                We are open to hear your honest opinion about our page and critical views.
+                                If you have any new ideas or suggestions of how we can improve our page, you
+                                can contact us via the feedback form down below:
+                            </p>
+                        </div>
+
+                        <div>
+                            <label for="Name">Name:</label>
+                            <input type="text" name="name" required>
+                        </div>
+
+                        <div>
+                            <label for="email">E-Mail:</label>
+                            <input type="text" name="email" id="email">
+                        </div>
+
+                        <div>
+                            <label for="feedback">Feedback:</label>
+                            <textarea type="text" name="feedback"></textarea>
+                        </div>
+
+                        <div style="justify-content: right;">
+                            <button class="bttn-simple bttn-md bttn-royal" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

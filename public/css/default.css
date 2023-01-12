@@ -1,0 +1,240 @@
+@font-face {
+    font-family: Lato;
+    src: url(/font/Lato/Lato-Regular.ttf);
+}
+
+.Title-Animation > p {
+    text-align: center;
+    font-size: 35ch;
+    color: white;
+    text-shadow: 0px 3px aliceblue;
+}
+
+
+
+.image {
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    background-image: url(/images/pictures/paris-skyline.jpg);
+
+    background-size:cover;
+  }
+
+  .content {
+
+    position: absolute;
+
+    top: 100%;
+
+    width: 100%;
+
+    height: 100%;
+  }
+
+
+/* Body */
+body {
+    font-family: "Outfit", sans-serif;
+    color: white;
+    margin: 0%;
+    background: linear-gradient(-45deg, #8fcef6, #94c3dd, #d1dce1);
+    background-size: 400% 400%;
+    animation: gradient 45s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* NavBar */
+ul {
+    color: white;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+ul a {
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+    margin: 0 10;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+    padding: 5px;
+    position: relative;
+}
+
+ul a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #729dff;
+    top: 80%;
+    animation: underline_out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+}
+
+ul a:hover:before {
+    animation: underline_in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+}
+
+@keyframes underline_in {
+    0% {
+        width: 0;
+        left: 0;
+        right: auto;
+    }
+    100% {
+        left: 0;
+        right:auto;
+        width: 100%;
+    }
+}
+
+@keyframes underline_out {
+    0% {
+        width: 100%;
+        left: auto;
+        right: 0;
+    }
+    100% {
+        width: 0;
+        left: auto;
+        right: 0;
+    }
+}
+
+/* Margin Presets */
+.margin20 {
+    margin: 20px;
+}
+
+.margin50 {
+    margin: 100px;
+}
+
+/* Wrapper */
+.wrapper {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+.wrapper > * {
+    padding: 10px 5% 10px 5%;
+    flex: 1100%;
+    align-self: center;
+    max-width: 100%;
+}
+
+/* Flex Container */
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-container > div {
+    width: flex;
+    margin: 25px;
+    text-align: center;
+    line-break: 75px;
+    font-size: 30px;
+}
+
+/* Table */
+table {
+    border-collapse: collapse;
+    color: black;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px -1px rgb(0 0 0 / 0.1), 0px 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+table thead th {
+    border-right: 3px solid #cecece;
+    border-bottom: 3px solid #cecece;
+    color: black;
+    font-weight: 700;
+    padding: 8px 0px;
+    font-size: 20px;
+}
+
+table tbody td {
+    border-right: 3px solid #cecece;
+    border-bottom: 3px solid #cecece;
+    padding: 8px 5px;
+}
+
+table tfoot td {
+    border-right: 3px solid #cecece;
+    padding: 8px 5px;
+}
+
+/* Animation */
+.focus-in-expand-fwd {
+    animation: focus-in-expand-fwd 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes focus-in-expand-fwd {
+    0% {
+        transform: translateZ(-800px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateZ(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+.focus-in-contract-bck {
+    animation: focus-in-contract-bck 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes focus-in-contract-bck {
+    0% {
+        transform: translateZ(300px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateZ(12px);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+.container-ease-in {
+    animation: transitionIn 0.5s 1.1s both;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
