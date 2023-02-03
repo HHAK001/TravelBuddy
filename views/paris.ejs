@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="/css/default.css">
     <link rel="stylesheet" href="/css/form.css">
     <link rel="stylesheet" href="/css/bttn.css">
-    <link rel="stylesheet" href="/css/bootstrap-new.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/bootstrap10.css">
     <!-- Script -->
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
@@ -29,54 +29,54 @@
 
 <body>
 
-  <div class="image">
+  <div class="image-paris">
     <div class="Title-Animation container-ease-in">
-      <p>Paris</p>
+      <p><%= KonstcityName %></p>
     </div>
    </div>
     <div class="content">
 
 
-
     <!-- NavBar -->
     <div class="container">
-        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-          <a href="/home" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-light text-decoration-none" style="font-family:'Caveat', cursive; font-weight: 700; font-size: 400%;">
-            TravelBuddy
-          </a>
-                <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 focus-in-contract-bck">   
-                    <li><a href="/suggestion" class="nav-link px-2 link-light">Suggest a new City</a></li>
-                    <li><a href="/contact" class="nav-link px-2 link-light">Contact</a></li>
-                </ul>
-        </header>
-    </div>
-
+      <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+        <a href="/home" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-light text-decoration-none" style="font-weight: 700; font-size: 400%;">
+          TravelBuddy
+        </a>
+              <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 focus-in-contract-bck">   
+                  <li><a href="/suggestion" class="nav-link px-2 link-light">Suggest a new City</a></li>
+                  <li><a href="/contact" class="nav-link px-2 link-light">Contact</a></li>
+              </ul>
+      </header>
+  </div>
     <main>
-
-        <section class="py-3 text-center container">
+        <section class="py-3 container text-center container">
           <div class="row py-lg-1">
             <div class="col-lg-6 col-md-8 mx-auto">
               <h1 class="fw-light">Paris</h1>
               <p class="lead text-muted">France</p>
             </div>
           </div>
-        </section>
+          <div class="col align-self-end">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6DwL4msUc0G7u3k51YrOvF?utm_source=generator" width="50%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" ></iframe>
+          </div>
+         </section>
+         
       
         <div class="album py-5 bg-light">
-          <div class="container">
-      
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="container-fluid text-center">
+            <div class="row row-cols-2 row-cols-lg-6 g-2 g-lg-3">
+
               <div class="col">
                 <div class="card shadow-sm">
+                  <div class="card-header" style="color: black; font-size: large; font-weight:bold;text-transform: uppercase;">Food Spots</div>
                   <img src="/images/Travel_BUDDY/Paris/landmonkeys-min.png" alt="" style="height: 225px; width: 100%; object-fit: cover;">
                   <div class="card-body">
-                    <p class="card-text" style="color: black;">Bistro LINK TEST</p>
+                    <p class="card-text" style="color: black;">Land and Monkeys</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <form action="submit">
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.open('https://goo.gl/maps/6FgQsZCVpiSeKghV8', '_blank')">Google</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.open('https://www.instagram.com/land_and_monkeys/?hl=en', '_blank')">IG</button>
-                        </form>
+                        <button type="button" class="btn btn-sm btn-outline-primary" onclick="window.open('https://goo.gl/maps/6FgQsZCVpiSeKghV8', '_blank')">Google</button>
+                        <button type="button" class="btn btn-sm btn-outline-primary" onclick="window.open('https://www.instagram.com/land_and_monkeys/?hl=en', '_blank')">IG</button>
                       </div>
                     </div>
                   </div>
@@ -85,13 +85,13 @@
               
               <div class="col">
                 <div class="card shadow-sm">
-                  <img src="/images/Travel_BUDDY/Paris/arc-min.png" alt="" style="height: 225px; width: 100%; object-fit: cover;">
+                  <div class="card-header" style="color: black; font-size: large; font-weight:bold; text-transform: uppercase; ">Nature</div>
+                  <img src="/images/Travel_BUDDY/Paris/Coulee.jpg" alt="" style="height: 225px; width: 100%; object-fit: cover;">
                   <div class="card-body">
-                    <p class="card-text" style="color: black ;">Café ...</p>
+                    <p class="card-text" style="color: black ;">Coulée verte René-Dumont</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.open('https://goo.gl/maps/6FgQsZCVpiSeKghV8', '_blank')">Google</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.open('https://www.instagram.com/land_and_monkeys/?hl=en', '_blank')">IG</button>
+                        <button type="button" class="btn btn-sm btn-outline-primary" onclick="window.open('https://goo.gl/maps/b4V9XGunRj1EgAYN9', '_blank')">Google</button>
                       </div>
                     </div>
                   </div>
@@ -100,65 +100,152 @@
 
               <div class="col">
                 <div class="card shadow-sm">
-                  <img src="/images/Travel_BUDDY/Paris/5pailes-min.png" alt="" style="height: 225px; width: 100%; object-fit: cover;">
+                  <div class="card-header" style="color: black; font-size: large; font-weight:bold;text-transform: uppercase;">Shopping</div>
+                  <img src="/images/Travel_BUDDY/Paris/champ.jpg" alt="" style="height: 225px; width: 100%; object-fit: cover;">
                   <div class="card-body">
-                    <p class="card-text" style=" color:black">Restaurant ...</p>
+                    <p class="card-text" style=" color:black">Champs-Élysées</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.open('https://goo.gl/maps/6FgQsZCVpiSeKghV8', '_blank')">Google</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.open('https://www.instagram.com/land_and_monkeys/?hl=en', '_blank')">IG</button>
+                        <button type="button" class="btn btn-sm btn-outline-primary" onclick="window.open('https://goo.gl/maps/jYAEAM7SQyFgSTot9', '_blank')">Google</button>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
+              <div class="col">
+                <div class="card shadow-sm">
+                  <div class="card-header" style="color: black; font-size: large; font-weight:bold;text-transform: uppercase;">Entertainment</div>
+                  <img src="/images/Travel_BUDDY/Paris/disney.jpg" alt="" style="height: 225px; width: 100%; object-fit: cover;">
+                  <div class="card-body">
+                    <p class="card-text" style="color: black;">Disneyland Paris</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-primary" onclick="window.open('https://goo.gl/maps/37zZbTevrgE5s88d8', '_blank')">Google</button>
+                        <button type="button" class="btn btn-sm btn-outline-primary" onclick="window.open('https://www.disneylandparis.com/de-de/', '_blank')">Website</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col">
+                <div class="card shadow-sm">
+                  <div class="card-header" style="color: black; font-size: large; font-weight:bold;text-transform: uppercase;">Culture</div>
+                  <img src="/images/Travel_BUDDY/Paris/louvre.jpg" alt="" style="height: 225px; width: 100%; object-fit: cover;">
+                  <div class="card-body">
+                    <p class="card-text" style="color: black ;">Louvre</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-primary" onclick="window.open('https://goo.gl/maps/PEerVdg22pvKsNAf6', '_blank')">Google</button>
+                        <button type="button" class="btn btn-sm btn-outline-primary" onclick="window.open('https://www.louvre.fr/en', '_blank')">Website</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card shadow-sm">
+                  <div class="card-header" style="color: black; font-size: large; font-weight:bold;text-transform: uppercase;">Sight Seeing</div>
+                  <img src="/images/Travel_BUDDY/Paris/eifel-min.png" alt="" style="height: 225px; width: 100%; object-fit: cover;">
+                  <div class="card-body">
+                    <p class="card-text" style=" color:black">Tour Eiffel</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-primary" onclick="window.open('https://goo.gl/maps/mKHAd8xuhVXAffQcA', '_blank')">Google</button>
+                        <button type="button" class="btn btn-sm btn-outline-primary" onclick="window.open('https://www.toureiffel.paris/', '_blank')">Website</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img src="/images/Travel_BUDDY/Paris/b-c.jpg" alt="" style="height: 225px; width: 100%; object-fit: cover;">
+                  <div class="card-body">
+                    <p class="card-text" style=" color:black">Bouillon Chartier</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-primary" onclick="window.open('https://goo.gl/maps/d1P8VN8eBJA345Xt7', '_blank')">Google</button>
+                        <button type="button" class="btn btn-sm btn-outline-primary" onclick="window.open('https://www.instagram.com/bouillonchartier/', '_blank')">IG</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img src="/images/Travel_BUDDY/Paris/buttes.jpg" alt="" style="height: 225px; width: 100%; object-fit: cover;">
+                  <div class="card-body">
+                    <p class="card-text" style=" color:black">Parc des Buttes-Chaumont</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-primary" onclick="window.open('https://goo.gl/maps/N6o57JJnF4Rn9Wer9', '_blank')">Google</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img src="/images/Travel_BUDDY/Paris/lafayettes.jpeg" alt="" style="height: 225px; width: 100%; object-fit: cover;">
+                  <div class="card-body">
+                    <p class="card-text" style=" color:black">Galeries Lafayette</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-primary" onclick="window.open('https://goo.gl/maps/GspdqRbm2ubZTxrw9', '_blank')">Google</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img src="/images/Travel_BUDDY/Paris/Rad.jpg" alt="" style="height: 225px; width: 100%; object-fit: cover;">
+                  <div class="card-body">
+                    <p class="card-text" style=" color:black">Grande Roue De Paris</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-primary" onclick="window.open('https://goo.gl/maps/MYEVhyZgsczHw5A6A', '_blank')">Google</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col">
+                <div class="card shadow-sm">
+                  <img src="/images/Travel_BUDDY/Paris/Arc.jpg" alt="" style="height: 225px; width: 100%; object-fit: cover;">
+                  <div class="card-body">
+                    <p class="card-text" style=" color:black">Arc de Triomphe de l’Étoile</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-primary" onclick="window.open('https://goo.gl/maps/PXJ4Yz94rBG5qhw99', '_blank')">Google</button>
+                        <button type="button" class="btn btn-sm btn-outline-primary" onclick="window.open('https://www.paris-arc-de-triomphe.fr/', '_blank')">Website</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
               <div class="col">
                 <div class="card shadow-sm">
                   <img src="/images/Travel_BUDDY/Paris/sacre-min.png" alt="" style="height: 225px; width: 100%; object-fit: cover;">
                   <div class="card-body">
-                    <p class="card-text" style="color: black;">Bistro ...</p>
+                    <p class="card-text" style=" color:black">Basilika Sacré-Cœur</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.open('https://goo.gl/maps/6FgQsZCVpiSeKghV8', '_blank')">Google</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.open('https://www.instagram.com/land_and_monkeys/?hl=en', '_blank')">IG</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="col">
-                <div class="card shadow-sm">
-                  <img src="/images/Travel_BUDDY/Paris/bouillon-min.png" alt="" style="height: 225px; width: 100%; object-fit: cover;">
-                  <div class="card-body">
-                    <p class="card-text" style="color: black ;">Café ...</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.open('https://goo.gl/maps/6FgQsZCVpiSeKghV8', '_blank')">Google</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.open('https://www.instagram.com/land_and_monkeys/?hl=en', '_blank')">IG</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col">
-                <div class="card shadow-sm">
-                  <img src="/images/Travel_BUDDY/Paris/parcButtes-min.png" alt="" style="height: 225px; width: 100%; object-fit: cover;">
-                  <div class="card-body">
-                    <p class="card-text" style=" color:black">Restaurant ...</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.open('https://goo.gl/maps/6FgQsZCVpiSeKghV8', '_blank')">Google</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.open('https://www.instagram.com/land_and_monkeys/?hl=en', '_blank')">IG</button>
+                        <button type="button" class="btn btn-sm btn-outline-primary" onclick="window.open('https://goo.gl/maps/rqEvCt5p1s7TJhY87', '_blank')">Google</button>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
       </main>
-
-    </div>
 </body>
 </html>

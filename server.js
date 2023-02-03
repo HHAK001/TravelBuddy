@@ -9,19 +9,13 @@ app.use(express.urlencoded({extended: true}));
 app.engine('.ejs', require('ejs').__express);
 app.set('view engine', 'ejs');
 
-// SQLite3
-const sqlite3 = require('sqlite3').verbose();
-const DATABASE = 'public/database/Benutzer.db';
-const feedbackDB = 'public/database/Feedback.db'
-const db = new sqlite3.Database(DATABASE);
-const db2 = new sqlite3.Database(feedbackDB);
-
 // Cookie-Parser
 const cookieParser = require('cookie-parser');
 app.use(cookieParser());
 
 // Express-Session
 const session = require('express-session');
+const { render } = require('ejs');
 app.use(session({
 secret: 'YOURSECRETCODE',
 saveUninitialized: false,
@@ -31,6 +25,61 @@ resave: false
 //Ordner freigeben
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/views'));
+
+//mongoose
+const mongoose = require("mongoose");
+mongoose.connect("mongodb+srv://Admin-AK:AfshinAdminKorrani0811@travelbuddy.qkbzqq0.mongodb.net/TravelBuddy", {useNewUrlParser: true});
+
+//Feedback Data
+const feedbackDataSchema = {
+    feedbackName: String,
+    feedbackMail: String,
+    feedbackText: String,
+};
+
+const FeedbackSubmission = mongoose.model("feedbackSubmission", feedbackDataSchema);
+
+//CitySuggestion Data
+const citySuggestionSchema = {
+    cityName: String,
+    countryName: String,
+};
+
+const CitySuggestion = mongoose.model("citySuggestion", citySuggestionSchema);
+
+//Paris Data
+// const parisDataSchema = {
+//     Group: String,
+//     Name: String,
+//     Link: String,
+// };
+
+// const ParisData = mongoose.model("parisData", parisDataSchema);
+
+
+// FeedbackSubmission.find({}, function(err, foundItems){
+//     console.log(foundItems);
+// })
+
+// const item1 = new Item({
+//     name: "Welcome to Paris!"
+// });
+
+// const itemsSchema = {
+//     name: String
+// };
+
+// const Item = mongoose.model("Item", itemsSchema);
+
+
+// Item.insertMany(item1, function(err){
+//     if (err) {
+//         console.log(err);
+//     } else {
+//         console.log("Successfully saved default items to DB");
+//     }
+// });
+
 
 //Server-starten
 app.listen(5050, function()
@@ -52,23 +101,61 @@ app.get('/suggestion', function(req, res){
 });
 
 app.get('/paris', function(req, res){
-    res.render(__dirname + "/views/paris.ejs");
+    const cityNameParis = "Paris";
+    res.render(__dirname + "/views/paris.ejs", { KonstcityName: cityNameParis});
 });
 
+app.get('/berlin', function(req, res){
+    const cityNameBerlin = "Berlin";
+    res.render(__dirname + "/views/berlin.ejs", { KonstcityName: cityNameBerlin});
+});
 
+app.get('/madrid', function(req, res){
+    const cityNameMadrid = "Madrid";
+    res.render(__dirname + "/views/madrid.ejs", { KonstcityName: cityNameMadrid});
+});
+
+app.get('/wien', function(req, res){
+    const cityNameWien = "Wien";
+    res.render(__dirname + "/views/wien.ejs", { KonstcityName: cityNameWien});
+});
 
 
 // Feedback
 app.post("/feedback", function(req, res){
-    const param_name = req.body.name;
-    const param_email = req.body.email;
-    const param_feedback = req.body.feedback;
 
-    db2.run(
-        `INSERT INTO feedback(name, email, feedback) VALUES ("${param_name}", "${param_email}", "${param_feedback}")`,
-        function(err){
-            return res.render("feedback_submitted");
+    const feedbackData = new FeedbackSubmission({
+        feedbackName: req.body.name,
+        feedbackMail: req.body.email,
+        feedbackText: req.body.feedback,
+    });
+
+    FeedbackSubmission.insertMany(feedbackData, function(err){
+        if (err) {
+            console.log(err);
+        } else {
+            console.log("Successfully saved data to DB");
         }
-    )
+    });
 
+    res.render("feedback_submitted");
+});
+
+//City-Suggestion
+app.post("/city_suggestion", function(req, res){
+
+    const citySuggetionsData = new CitySuggestion({
+        cityName: req.body.city,
+        countryName: req.body.country,
+    });
+
+    CitySuggestion.insertMany(citySuggetionsData, function(err){
+        if (err) {
+            console.log(err);
+        } else {
+            console.log("Successfully saved data to DB");
+        }
+    });
+
+    res.render("feedback_submitted");
 });

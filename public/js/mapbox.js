@@ -2,8 +2,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiaGhhazAwIiwiYSI6ImNsOXZvNmh4eTF4eWgzb3RmdnhnM
 
 const map = new mapboxgl.Map({
   container: 'map',
-  style: 'mapbox://styles/mapbox/light-v10',
-  center: [-96, 37.8],
+  style: 'mapbox://styles/hhak00/clctplyat002n15l6qlvbw40k',
+  center: [4, 45],
   zoom: 3
 });
 
@@ -26,14 +26,38 @@ const geojson = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-77.032, 38.913]
+        coordinates: [13.404954, 52.520008]
       },
       properties: {
-        title: 'Mapbox',
-        description: 'San Francisco, California',
-        link:'/sanfrancisco' 
+        title: 'Berlin',
+        description: 'Germany',
+        link:'/berlin' 
       }
-    }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [-3.703790, 40.416775]
+      },
+      properties: {
+        title: 'Madrid',
+        description: 'Spain',
+        link:'/madrid' 
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [16.373819, 48.208176]
+      },
+      properties: {
+        title: 'Wien',
+        description: 'Austria',
+        link:'/wien' 
+      }
+    },
   ]
 };
 

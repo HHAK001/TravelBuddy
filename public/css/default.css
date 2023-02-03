@@ -6,13 +6,13 @@
 .Title-Animation > p {
     text-align: center;
     font-size: 35ch;
-    color: white;
-    text-shadow: 0px 3px aliceblue;
+    color: #9DD2FB;
+    text-shadow: 1px 4px aliceblue;
 }
 
 
 
-.image {
+.image-paris {
 
     position: absolute;
 
@@ -21,6 +21,42 @@
     height: 100%;
 
     background-image: url(/images/pictures/paris-skyline.jpg);
+
+    background-size:cover;
+  }
+  .image-berlin {
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    background-image: url(/images/pictures/berlin-skyline.jpg);
+
+    background-size:cover;
+  }
+  .image-wien {
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    background-image: url(/images/pictures/wien-skyline.jpg);
+
+    background-size:cover;
+  }
+  .image-madrid {
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    background-image: url(/images/pictures/madrid-skyline.jpg);
 
     background-size:cover;
   }
@@ -42,9 +78,9 @@ body {
     font-family: "Outfit", sans-serif;
     color: white;
     margin: 0%;
-    background: linear-gradient(-45deg, #8fcef6, #94c3dd, #d1dce1);
+    background: linear-gradient(-45deg, #45CAFF, #49ACF7, #8C9EFA, #96A7FA, #A0AFFA);
     background-size: 400% 400%;
-    animation: gradient 45s ease infinite;
+    animation: gradient 10s ease infinite;
     height: 100vh;
 }
 
