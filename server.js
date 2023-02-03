@@ -47,40 +47,6 @@ const citySuggestionSchema = {
 
 const CitySuggestion = mongoose.model("citySuggestion", citySuggestionSchema);
 
-//Paris Data
-// const parisDataSchema = {
-//     Group: String,
-//     Name: String,
-//     Link: String,
-// };
-
-// const ParisData = mongoose.model("parisData", parisDataSchema);
-
-
-// FeedbackSubmission.find({}, function(err, foundItems){
-//     console.log(foundItems);
-// })
-
-// const item1 = new Item({
-//     name: "Welcome to Paris!"
-// });
-
-// const itemsSchema = {
-//     name: String
-// };
-
-// const Item = mongoose.model("Item", itemsSchema);
-
-
-// Item.insertMany(item1, function(err){
-//     if (err) {
-//         console.log(err);
-//     } else {
-//         console.log("Successfully saved default items to DB");
-//     }
-// });
-
-
 //Server-starten
 app.listen(5050, function()
 {
